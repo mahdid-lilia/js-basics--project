@@ -134,6 +134,9 @@ submitBtn.addEventListener("click", () => {
   }
 });
 
+
+
+// Simple Countdown Timer with JavaScript
 const startTime = 1;
 let time = startTime * 60;
 const countdownEl = document.getElementById("countdown");
