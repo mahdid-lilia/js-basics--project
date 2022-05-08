@@ -68,3 +68,25 @@ button:focus {
     background-color: #5e3370;
     outline: none;
 }
+
+
+.timer .time_text{
+    font-weight: 600;
+    font-size: 17px;
+    user-select: none;
+}
+.timer .time_sec{
+    font-size: 18px;
+    font-weight: 500;
+    background: #5e3370 ;
+    height: 30px;
+    width: 45px;
+    color: rgb(234, 229, 229);
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid #343a40;
+    user-select: none;
+    align-items: flex-end;
+
+}
