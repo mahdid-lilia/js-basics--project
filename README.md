@@ -2,4 +2,4 @@
 # This is a JavaScript Basics Project
 # I created a simple Quiz with a timer using HTML, CSS and javascript
 
-# Here is the link for it: https://gregarious-duckanoo-9aaf37.netlify.app/
+# You can check it via this <a href="https://gregarious-duckanoo-9aaf37.netlify.app/"> link </a>  
