@@ -75,7 +75,6 @@ const quiz = document.getElementById("quiz");
 
 let currentQuiz = 0;
 let score = 0;
-
 loadQuiz();
 
 function loadQuiz() {
@@ -109,10 +108,10 @@ function deselectAnswers() {
     answerElements[i].checked = false;
   }
 }
-
 submitBtn.addEventListener("click", () => {
   const answer = getSelected();
-
+  time=startTime*60;
+  document.querySelector('.second').style.transform = `rotate(0deg)`
   if (answer) {
     if (answer === quizData[currentQuiz].correct) {
       console.log("correct answer");
@@ -134,17 +133,35 @@ submitBtn.addEventListener("click", () => {
   }
 });
 
-
-
 // Simple Countdown Timer with JavaScript
-const startTime = 1;
+const startTime = 0.25;
 let time = startTime * 60;
 const countdownEl = document.getElementById("countdown");
 setInterval(updateCountdown, 1000);
 
 function updateCountdown() {
-  const minutes = Math.floor(time / 60);
-  const seconds = time % 60;
-  countdownEl.innerHTML = `${seconds}`;
-  time--;
+  if (time>0) {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    // countdownEl.innerHTML = `${seconds}`;
+    time--;
+  } else  {
+    time = startTime * 60;
+    alert("Time is over");
+    currentQuiz=0;
+    loadQuiz();
+    document.querySelector('.second').style.transform = `rotate(0deg)`
+  }
 }
+
+
+inc = 1000;
+
+clock();
+
+function clock() {
+  document.querySelector('.second').style.transform = `rotate(${-(360/(startTime*60))*time}deg)`
+}
+
+setInterval(clock, inc);
+
